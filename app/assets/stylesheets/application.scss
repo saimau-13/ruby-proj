@@ -4,8 +4,8 @@
 
 .dashboard-panel {
   /* Panel box styling */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px; /* Slightly rounded corners */
+  border: 1px solid blue;
+  border-radius: 12px; /* Slightly rounded corners */
   padding: 20px;
   margin-bottom: 20px; /* Space between panels and the next row */
   background-color: #ffffff;
@@ -22,8 +22,8 @@
 }
 
 /* Optional: Highlight a panel */
-.panel-highlight {
-  border-left: 5px solid #28a745; /* Green highlight on the side */
+.panel-two {
+  border-left: 5px solid #2278be; /* Green highlight on the side */
   background-color: #f8fff8; /* Very light green background */
 }
 
@@ -31,4 +31,5 @@
 .btn-block {
     display: block;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
 }
