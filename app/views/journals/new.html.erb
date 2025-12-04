@@ -1,0 +1,30 @@
+<h1>User Story Automation</h1>
+
+<h2>Add a new User Story</h2>
+
+<%= form_with(model: @journal) do |form| %>
+
+ <div>
+   <%= form.label :User %>
+   <%= form.text_field :user %>
+   
+   <%= form.label :Role %>
+   <%= form.text_field :role %>
+ </div>
+<p> 
+
+
+</p>
+
+
+ <div>
+   <%= form.submit %>
+ </div>
+
+<% end %>
+
+<br>
+
+<div>
+ <%= link_to "Back to user stories", root_path %>
+</div>
