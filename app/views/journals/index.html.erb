@@ -10,6 +10,10 @@
 </head>
 
 
+<body class="<%= 'journals-background' if controller_name == 'journals' && action_name == 'index' %>"> 
+    <%= yield %>
+
+
 <ul class="nav justify-content-end">
   <li class="nav-item">
     <a class="nav-link active" href="new.html.erb">Home</a>
@@ -48,27 +52,24 @@
       <div class="dashboard-panel">
         <h3><strong>My tasks</strong></h3>
         <hr>
-        <p><strong> 8 </strong> Tasks to do</p>
-        <a href="http://localhost:3000/journals/new" class="btn btn-primary btn-block mb-4">View outstanding tasks</a>
-
+        <p>
+            <strong> 8 </strong> Tasks to do
+            <a href="http://localhost:3000/journals/new" class="btn btn-primary mb-4"> View all tasks</a>
+        </p> 
         <a href="#" class="btn btn-outline-secondary btn-block">View all tasks</a>
-    
       </div>
     </div>
     
-  </div>
 
-
-</div>
-    <div class="col-md-4">
      <div class="col-md-4">
-    <div class="dashboard-panel panel-highlight">
-    
+    <div class="dashboard-panel">
+    <h3><strong>Build a ticket</strong></h3>
+    <hr>
     <form action="/dashboard/submit_activity" method="post">
       <input type="hidden" name="user_id" value="Current-Admin-101">
       
        <div class="form-group mb-4">
-        <label for="activityDate">Date</label>
+        <label for="activityDate">Date of creation</label>
         <input type="date" 
                class="form-control" 
                id="activityDate" 
@@ -76,12 +77,22 @@
                value="<%= Date.today.to_s %>"> 
         </div>
 
+        <div class="form-group mb-3">
+        <label for="activityPersona">Assign to persona</label>
+        <input type="text" 
+               class="form-control"
+               id="activityPersona"
+               name="Persona"
+               placeholder="Judge">
+      </div>
+
+
       <div class="form-group mb-3">
-        <label for="activityType">Status</label>
+        <label for="activityType">Ticket Status</label>
         <select class="form-control" id="activityType" name="activity_type">
-          <option selected>Just added</option>
-          <option>Complete</option>
-          <option>Under review</option>
+          <option selected>Draft</option>
+          <option>Under Review</option>
+          <option>Archive</option>
         </select>
       </div>
       
@@ -94,18 +105,34 @@
                placeholder="To mention in stand-up">
       </div>
       
-      <button type="submit" class="btn btn-success btn-block">Record Activity</button>
+      <button type="submit" class="btn btn-outline-secondary">
+      Save to drafts</button>
+
+      <button type="submit" class="btn btn-success">
+      Create ticket</button>
       <hr>
     </form>
     
   </div>
 </div>
 
-<!-- Display all items in the journal list
+</div>
+</div>
+   
+
+<div class="container mt-5">
+<h1><strong>All Tickets</strong></h1>
+<h2>View tickets that are in drafts, under review or archived</h2>
 <div>
+<hr>
+<em>
     <% @journals.each do |journal| %>
         <%= journal.name %>
     <% end %>
-</div> -->
+    </em>
+</div>
+
+</div>
+</body>
 
 </html>

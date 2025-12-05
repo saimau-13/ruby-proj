@@ -1,10 +1,19 @@
  @import "bootstrap";
 
- /* Custom CSS for the Dashboard Panels */
+ /* Index background */
+.journals-background {
+  background-color: #cde1f1; /* A light grey color */
+}
 
+/* New [Build a persona] background ]*/
+.new-background{
+    background-color: #a3c5e9;
+}
+
+ /* Custom CSS for the Dashboard panels */
 .dashboard-panel {
   /* Panel box styling */
-  border: 1px solid blue;
+  border: 2px solid rgb(67, 111, 206);
   border-radius: 12px; /* Slightly rounded corners */
   padding: 20px;
   margin-bottom: 20px; /* Space between panels and the next row */
@@ -14,7 +23,7 @@
 }
 
 .dashboard-panel h3 {
-  color: #007bff; /* Bootstrap's primary color */
+  color: #19497d; /* Bootstrap's primary color */
   margin-top: 0;
   margin-bottom: 15px;
   padding-bottom: 5px;
@@ -23,7 +32,7 @@
 
 /* Optional: Highlight a panel */
 .panel-two {
-  border-left: 5px solid #2278be; /* Green highlight on the side */
+  border-left: 5px solid hwb(207 13% 25%); /* Green highlight on the side */
   background-color: #f8fff8; /* Very light green background */
 }
 
@@ -32,4 +41,9 @@
     display: block;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+.btn-success {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    background-color: #5f819f; /* Very light green background */
 }
