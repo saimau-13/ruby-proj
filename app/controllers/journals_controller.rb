@@ -8,6 +8,10 @@ class JournalsController < ApplicationController
         @journal = Journal.new()
     end
 
+    def tickets
+        @journal = Journal.tickets()
+    end
+    
     def create
         @journal = Journal.new(journal_params)
         if @journal.save
@@ -16,6 +20,8 @@ class JournalsController < ApplicationController
             render :new
         end
     end
+
+
 
     private
 

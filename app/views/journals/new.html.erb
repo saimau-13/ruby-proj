@@ -1,30 +1,47 @@
-<h1>User Story Automation</h1>
+<hr>
 
-<h2>Add a new User Story</h2>
-
-<%= form_with(model: @journal) do |form| %>
-
- <div>
-   <%= form.label :User %>
-   <%= form.text_field :user %>
-   
-   <%= form.label :Role %>
-   <%= form.text_field :role %>
- </div>
-<p> 
-
-
-</p>
-
-
- <div>
-   <%= form.submit %>
- </div>
-
-<% end %>
+<div class="container mt-5">
+<h1><strong>Build a user story</strong></h1>
+<h2>Enter persona information</h2>
 
 <br>
 
-<div>
- <%= link_to "Back to user stories", root_path %>
+<div class="d-flex align-items-center">
+    <%= form_with(model: @journal) do |form| %>
+
+ <div>
+   <%= form.label :Name %>
+   <%= form.text_field :Name %>
+   
+   <%= form.label :Role %>
+   <%= form.text_field :Role %>
+ </div>
+
+ <div class="container mt-5">
+
+  <button type="button" 
+                class="btn btn-danger" 
+                title="Clear Role Field"
+                onclick="document.getElementById('journal_role').value = '';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        
+    </button>
+</div>
+</div>
+
+
+<br>
+
+ <div>
+   <%= form.submit %>
+</div>
+
+<% end %>
+    <br>
+</div>
+
+<div class="container mt-5">
+ <a href="http://localhost:3000/" class="btn btn-primary btn-block mb-4">Back to dashboard</a>
 </div>

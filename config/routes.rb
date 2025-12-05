@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   root 'journals#index'
-  resources :journals, only: [:create, :new]
+  resources :journals, only: [:create, :new, :tickets]
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
