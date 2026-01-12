@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gem 'sassc-rails'
 
-gem 'bootstrap', '~> 5.3', '>= 5.3.5'
+gem 'bootstrap', '~> 5.3'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.3"
